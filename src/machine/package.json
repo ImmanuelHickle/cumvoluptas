@@ -1,0 +1,36 @@
+{
+  "name": "@ts-std/machine",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": {
+		"name": "Blaine Hansen",
+		"email": "faichenshing@gmail.com",
+		"url": "http://blainehansen.me/"
+	},
+  "homepage": "https://github.com/blainehansen/ts-std#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/blainehansen/ts-std.git"
+	},
+	"scripts": {
+		"test": "mocha -r ts-node/register lib/**/*.spec.ts",
+		"build": "rm -rf dist/* && tsc",
+		"preversion": "npm run build && npm test",
+		"postversion": "npm publish"
+	},
+	"bugs": {
+		"url": "https://github.com/blainehansen/ts-std/issues"
+	},
+	"dependencies": {
+		"@ts-std/types": "^1.0.0"
+	}
+}

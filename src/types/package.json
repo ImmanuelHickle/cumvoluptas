@@ -1,0 +1,33 @@
+{
+	"name": "@ts-std/types",
+	"version": "1.2.0",
+	"description": "Various helpful type definitions and type assertion helpers. Includes many tricky recursive and functional types.",
+	"author": {
+		"name": "Blaine Hansen",
+		"email": "faichenshing@gmail.com",
+		"url": "http://blainehansen.me/"
+	},
+	"homepage": "https://github.com/blainehansen/ts-std/tree/master/src/types#readme",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/blainehansen/ts-std.git"
+	},
+	"scripts": {
+		"test": "mocha -r ts-node/register lib/**/*.spec.ts",
+		"build": "rm -rf dist/* && tsc",
+		"preversion": "npm run build && npm test",
+		"postversion": "npm publish"
+	},
+	"bugs": {
+		"url": "https://github.com/blainehansen/ts-std/issues"
+	}
+}
